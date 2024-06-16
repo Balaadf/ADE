@@ -63,28 +63,6 @@
 						}
 					}
 				]
-			},
-			{
-				"name": "WebHook1",
-				"type": "WebHook",
-				"dependsOn": [
-					{
-						"activity": "customer_student",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"url": "https://prod-46.eastus.logic.azure.com:443/workflows/0f57715c13eb4c6c97f6153ea11cebd5/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=t_QAhGJDFc8MDl5N4NVAn4vAuhorS6L5cniU3zyLFDg",
-					"method": "POST",
-					"timeout": "00:10:00"
-				}
 			}
 		],
 		"annotations": [],
