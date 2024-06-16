@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mission100bala16101999"
+		},
+		"adls_customer_ls_accountKey": {
+			"value": ""
+		},
+		"adls_ls_accountKey": {
+			"value": ""
+		},
+		"adls_salescsv_ls_accountKey": {
+			"value": ""
+		},
+		"sqldb_customer_ls_password": {
+			"value": ""
+		},
+		"sqldb_sales_ls_password": {
+			"value": ""
+		},
+		"Rest_ls_properties_typeProperties_url": {
+			"value": "https://restcountries.com/v3.1/lang/spanish"
+		},
+		"adls_customer_ls_properties_typeProperties_url": {
+			"value": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"adls_ls_properties_typeProperties_url": {
+			"value": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"adls_salescsv_ls_properties_typeProperties_url": {
+			"value": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"rest_generic_ls_properties_typeProperties_url": {
+			"value": "https://restcountries.com/v3.1/capital"
+		},
+		"rest_pagination_ls_properties_typeProperties_url": {
+			"value": "https://dummyjson.com/products/{page_number}"
+		},
+		"sqldb_customer_ls_properties_typeProperties_server": {
+			"value": "sqldatawarehouseserver.database.windows.net"
+		},
+		"sqldb_customer_ls_properties_typeProperties_database": {
+			"value": "sqlserver"
+		},
+		"sqldb_customer_ls_properties_typeProperties_userName": {
+			"value": "azurelib"
+		},
+		"sqldb_sales_ls_properties_typeProperties_server": {
+			"value": "sqldatawarehouseserver.database.windows.net"
+		},
+		"sqldb_sales_ls_properties_typeProperties_database": {
+			"value": "sqlserver"
+		},
+		"sqldb_sales_ls_properties_typeProperties_userName": {
+			"value": "azurelib"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

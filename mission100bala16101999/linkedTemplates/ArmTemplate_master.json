@@ -1,0 +1,201 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "mission100bala16101999"
+		},
+		"adls_customer_ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adls_customer_ls'"
+		},
+		"adls_ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adls_ls'"
+		},
+		"adls_salescsv_ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adls_salescsv_ls'"
+		},
+		"sqldb_customer_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'sqldb_customer_ls'"
+		},
+		"sqldb_sales_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'sqldb_sales_ls'"
+		},
+		"Rest_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://restcountries.com/v3.1/lang/spanish"
+		},
+		"adls_customer_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"adls_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"adls_salescsv_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bala16101999adls.dfs.core.windows.net/"
+		},
+		"rest_generic_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://restcountries.com/v3.1/capital"
+		},
+		"rest_pagination_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://dummyjson.com/products/{page_number}"
+		},
+		"sqldb_customer_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqldatawarehouseserver.database.windows.net"
+		},
+		"sqldb_customer_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqlserver"
+		},
+		"sqldb_customer_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azurelib"
+		},
+		"sqldb_sales_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqldatawarehouseserver.database.windows.net"
+		},
+		"sqldb_sales_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqlserver"
+		},
+		"sqldb_sales_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azurelib"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "mission100bala16101999_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"adls_customer_ls_accountKey": {
+						"value": "[parameters('adls_customer_ls_accountKey')]"
+					},
+					"adls_ls_accountKey": {
+						"value": "[parameters('adls_ls_accountKey')]"
+					},
+					"adls_salescsv_ls_accountKey": {
+						"value": "[parameters('adls_salescsv_ls_accountKey')]"
+					},
+					"sqldb_customer_ls_password": {
+						"value": "[parameters('sqldb_customer_ls_password')]"
+					},
+					"sqldb_sales_ls_password": {
+						"value": "[parameters('sqldb_sales_ls_password')]"
+					},
+					"Rest_ls_properties_typeProperties_url": {
+						"value": "[parameters('Rest_ls_properties_typeProperties_url')]"
+					},
+					"adls_customer_ls_properties_typeProperties_url": {
+						"value": "[parameters('adls_customer_ls_properties_typeProperties_url')]"
+					},
+					"adls_ls_properties_typeProperties_url": {
+						"value": "[parameters('adls_ls_properties_typeProperties_url')]"
+					},
+					"adls_salescsv_ls_properties_typeProperties_url": {
+						"value": "[parameters('adls_salescsv_ls_properties_typeProperties_url')]"
+					},
+					"rest_generic_ls_properties_typeProperties_url": {
+						"value": "[parameters('rest_generic_ls_properties_typeProperties_url')]"
+					},
+					"rest_pagination_ls_properties_typeProperties_url": {
+						"value": "[parameters('rest_pagination_ls_properties_typeProperties_url')]"
+					},
+					"sqldb_customer_ls_properties_typeProperties_server": {
+						"value": "[parameters('sqldb_customer_ls_properties_typeProperties_server')]"
+					},
+					"sqldb_customer_ls_properties_typeProperties_database": {
+						"value": "[parameters('sqldb_customer_ls_properties_typeProperties_database')]"
+					},
+					"sqldb_customer_ls_properties_typeProperties_userName": {
+						"value": "[parameters('sqldb_customer_ls_properties_typeProperties_userName')]"
+					},
+					"sqldb_sales_ls_properties_typeProperties_server": {
+						"value": "[parameters('sqldb_sales_ls_properties_typeProperties_server')]"
+					},
+					"sqldb_sales_ls_properties_typeProperties_database": {
+						"value": "[parameters('sqldb_sales_ls_properties_typeProperties_database')]"
+					},
+					"sqldb_sales_ls_properties_typeProperties_userName": {
+						"value": "[parameters('sqldb_sales_ls_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "mission100bala16101999_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'mission100bala16101999_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "mission100bala16101999_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'mission100bala16101999_ArmTemplate_1')]"
+			]
+		}
+	]
+}
