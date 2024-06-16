@@ -1,0 +1,16 @@
+{
+	"name": "rest_relativeurl_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "rest_generic_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "tallinn"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

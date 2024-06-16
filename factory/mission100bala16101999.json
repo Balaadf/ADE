@@ -1,0 +1,9 @@
+{
+	"name": "mission100bala16101999",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a1b3b2f9-e9f8-43de-9d28-5abbdf27d383",
+		"tenantId": "055d9721-6c4d-4fae-bc99-ab307176861b"
+	}
+}

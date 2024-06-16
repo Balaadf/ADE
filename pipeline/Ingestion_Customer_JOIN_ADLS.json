@@ -1,0 +1,70 @@
+{
+	"name": "Ingestion_Customer_JOIN_ADLS",
+	"properties": {
+		"activities": [
+			{
+				"name": "copying_the_customernames_with_customeraddress",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select c.FirstName,c.MiddleName,c.LastName ,a.AddressLine1,a.AddressLine2,a.City,a.stateprovince,a.countryregion,a.postalcode\nfrom [saleslt].[customer] as c \ninner join [saleslt].[customeraddress] as ca\non c.CustomerID = ca.Customerid\ninner join [saleslt].[address] as a\non ca.AddressID = a.AddressID\n\n\n",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "customer_sqldb_adls_source_ds_generic",
+						"type": "DatasetReference",
+						"parameters": {
+							"schemaName": "saleslt",
+							"tableName": "customer"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "customer_sqldb_adls_sink_csv_ds_generic",
+						"type": "DatasetReference",
+						"parameters": {
+							"folderName": "customerandcustomeraddress"
+						}
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-06-06T05:01:35Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
