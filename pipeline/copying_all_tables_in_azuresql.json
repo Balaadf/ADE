@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "tables_copy",
+				"name": "all_tables",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -13,7 +13,10 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"firstRowOnly": false
+				}
 			}
 		],
 		"annotations": []
