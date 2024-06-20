@@ -1,0 +1,17 @@
+{
+	"name": "sqldb_source_generic_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldb_sales_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
