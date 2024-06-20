@@ -1,6 +1,21 @@
 {
-	"name": "pipeline1",
+	"name": "copying_all_tables_in_azuresql",
 	"properties": {
+		"activities": [
+			{
+				"name": "tables_copy",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
 		"annotations": []
 	}
 }
