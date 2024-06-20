@@ -17,11 +17,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select * from sys.tables",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "azure_sql_source_generic",
+						"referenceName": "address_sqldb_ds",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
