@@ -88,13 +88,20 @@
 							"inputs": [
 								{
 									"referenceName": "sqldb_source_generic_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"schema_name": "saleslt",
+										"table_name": "customer"
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "adls_sink_generic_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"folder_name": "new_customer_data"
+									}
 								}
 							]
 						}
