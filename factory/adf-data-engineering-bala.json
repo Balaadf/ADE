@@ -1,0 +1,9 @@
+{
+	"name": "adf-data-engineering-bala",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "15bf042f-6e2f-453d-8fbe-7acbd29d816a",
+		"tenantId": "08b4fcc0-ba60-4d21-ab8e-90fa0b119bd1"
+	}
+}
