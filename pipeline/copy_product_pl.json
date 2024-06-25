@@ -44,13 +44,19 @@
 				"inputs": [
 					{
 						"referenceName": "azuresql_ds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "product"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "adls_ds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"foldername": "product"
+						}
 					}
 				]
 			}
