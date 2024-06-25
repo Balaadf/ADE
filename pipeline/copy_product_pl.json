@@ -46,7 +46,8 @@
 						"referenceName": "azuresql_ds",
 						"type": "DatasetReference",
 						"parameters": {
-							"schema": "product"
+							"schema": "saleslt",
+							"table": "product"
 						}
 					}
 				],
