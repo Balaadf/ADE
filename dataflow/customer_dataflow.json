@@ -39,7 +39,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> customertextfile",
-				"customertextfile filter(ERROR_FUNCTION('')) ~> filter1"
+				"customertextfile filter(Customer_ID%2 == 0) ~> filter1"
 			]
 		}
 	}
