@@ -61,6 +61,7 @@
 				"     upsertable:true,",
 				"     keys:['CustomerID'],",
 				"     format: 'table',",
+				"     preSQLs:['SET IDENTITY_INSERT saleslt.customer ON\\n'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
