@@ -54,7 +54,7 @@
 				"filter1 alterRow(deleteIf(CustomerID%2!=0)) ~> AlterRow1",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     deletable:false,",
+				"     deletable:true,",
 				"     insertable:false,",
 				"     updateable:true,",
 				"     upsertable:false,",
