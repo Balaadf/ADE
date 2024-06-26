@@ -39,7 +39,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> customertextfile",
-				"customertextfile filter(mod(CustomerID,2)==0) ~> filter1"
+				"customertextfile filter(mod(CustomerID,2) == 0) ~> filter1"
 			]
 		}
 	}
