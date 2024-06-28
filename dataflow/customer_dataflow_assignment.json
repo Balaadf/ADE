@@ -15,7 +15,7 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "filter1"
+					"name": "even"
 				}
 			],
 			"scriptLines": [
@@ -39,7 +39,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> adls",
-				"adls filter(ERROR_FUNCTION('')) ~> filter1"
+				"adls filter(ERROR_FUNCTION('')) ~> even"
 			]
 		}
 	}
