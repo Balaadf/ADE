@@ -1,5 +1,5 @@
 {
-	"name": "customer_customeraddress",
+	"name": "customer_customeraddress_join_dataflow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
