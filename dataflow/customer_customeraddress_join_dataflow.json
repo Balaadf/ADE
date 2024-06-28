@@ -16,8 +16,8 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          CustomerID as string,",
-				"          NameStyle as string,",
+				"          CustomerID as short,",
+				"          NameStyle as boolean,",
 				"          Title as string,",
 				"          FirstName as string,",
 				"          MiddleName as string,",
