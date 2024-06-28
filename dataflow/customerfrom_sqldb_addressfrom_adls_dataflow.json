@@ -65,7 +65,7 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 filter(ERROR_FUNCTION('')) ~> filter1"
+				"join1 filter(adlscustomeraddress@CustomerID>1000 && adlscustomeraddress@CustomerID<2000) ~> filter1"
 			]
 		}
 	}
