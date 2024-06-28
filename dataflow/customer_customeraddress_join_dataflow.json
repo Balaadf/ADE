@@ -31,6 +31,9 @@
 			"transformations": [
 				{
 					"name": "join1"
+				},
+				{
+					"name": "Assert1"
 				}
 			],
 			"scriptLines": [
@@ -69,13 +72,17 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 sink(allowSchemaDrift: true,",
+				"join1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> Assert1",
+				"Assert1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     outputAssertFailedRows: true,",
+				"     assertFailure_container: 'rawdata',",
+				"     assertFailure_folderPath: 'json') ~> sink1"
 			]
 		}
 	}
