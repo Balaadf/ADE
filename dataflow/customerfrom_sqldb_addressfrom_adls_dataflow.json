@@ -1,0 +1,14 @@
+{
+	"name": "customerfrom_sqldb_addressfrom_adls_dataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				""
+			]
+		}
+	}
+}
