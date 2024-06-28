@@ -1,6 +1,10 @@
 {
 	"name": "adls_customer_dataflow_ds",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
