@@ -1,0 +1,19 @@
+{
+	"name": "adls_customeraddress_dataflow_json_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLT.CustomerAddress-nnCI751651 (1)-0A4ckSV5gM-jBPnfa8HWQ-i5OYvMKfOB.txt",
+				"fileSystem": "landing"
+			}
+		},
+		"schema": {}
+	}
+}

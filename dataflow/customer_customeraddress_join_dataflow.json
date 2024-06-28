@@ -13,7 +13,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "adls_customeraddress_dataflow_ds",
+						"referenceName": "adls_customeraddress_dataflow_json_ds",
 						"type": "DatasetReference"
 					},
 					"name": "source2"
@@ -30,16 +30,10 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     documentForm: 'documentPerLine') ~> source1",
-				"source(output(",
-				"          CustomerID as short,",
-				"          AddressID as short,",
-				"          AddressType as string,",
-				"          rowguid as string,",
-				"          ModifiedDate as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source2",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> source2",
 				"source1, source2 join(source1@CustomerID == source2@CustomerID,",
 				"     joinType:'left',",
 				"     matchType:'exact',",
