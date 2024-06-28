@@ -68,7 +68,7 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 filter(sqldbcustomer@CustomerID>10 && sqldbcustomer@CustomerID<20) ~> filter1",
+				"join1 filter(adlscustomeraddress@CustomerID>10 && adlscustomeraddress@CustomerID<20) ~> filter1",
 				"filter1 sort(asc(adlscustomeraddress@CustomerID, true)) ~> sort1"
 			]
 		}
