@@ -1,0 +1,19 @@
+{
+	"name": "adls_json_customer_dataflow_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLT.Customer-xRyuaEu2p7-WdCbzuWlIo-80V7BfCQtP-s9hnP5Uh4T.txt",
+				"fileSystem": "landing"
+			}
+		},
+		"schema": {}
+	}
+}
