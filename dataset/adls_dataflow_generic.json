@@ -5,16 +5,12 @@
 			"referenceName": "adls_dataflow_customer_ls",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"folder": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": "productresult",
 				"fileSystem": "landing"
 			},
 			"columnDelimiter": ",",
