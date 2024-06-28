@@ -50,7 +50,7 @@
 				"filter1 aggregate(groupBy(ProductCategoryID),",
 				"     ListPrice = max(ProductID)) ~> aggregate1",
 				"aggregate1 sort(desc(ListPrice, true)) ~> sort1",
-				"source1 filter(ERROR_FUNCTION('')) ~> filter1"
+				"source1 filter(Color!='blue') ~> filter1"
 			]
 		}
 	}
