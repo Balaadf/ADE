@@ -27,7 +27,7 @@
 					},
 					"name": "sink1",
 					"rejectedDataLinkedService": {
-						"referenceName": "adls_customer_ls",
+						"referenceName": "adls_dataflow_ls",
 						"type": "LinkedServiceReference"
 					}
 				}
