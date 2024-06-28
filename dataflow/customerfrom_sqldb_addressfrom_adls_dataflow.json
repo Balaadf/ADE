@@ -20,7 +20,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "join1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          CustomerID as integer,",
@@ -44,15 +48,20 @@
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> sqldbcustomer",
 				"source(output(",
-				"          CustomerID as string,",
-				"          AddressID as string,",
+				"          CustomerID as short,",
+				"          AddressID as short,",
 				"          AddressType as string,",
 				"          rowguid as string,",
 				"          ModifiedDate as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> adlscustomeraddress"
+				"     ignoreNoFilesFound: false) ~> adlscustomeraddress",
+				"sqldbcustomer, adlscustomeraddress join(sqldbcustomer@CustomerID == adlscustomeraddress@CustomerID,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1"
 			]
 		}
 	}
