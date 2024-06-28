@@ -12,7 +12,11 @@
 					"name": "adls"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "sqldb"
+				}
+			],
 			"transformations": [
 				{
 					"name": "even"
@@ -39,7 +43,11 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> adls",
-				"adls filter(ERROR_FUNCTION('')) ~> even"
+				"adls filter(CustomerID%2==0) ~> even",
+				"even sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sqldb"
 			]
 		}
 	}
