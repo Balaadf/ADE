@@ -1,10 +1,6 @@
 {
 	"name": "sqldb_customer_csv_sink_ds",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "sqldb_customer_ls",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"schemaName": {
 				"type": "string"

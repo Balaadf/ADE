@@ -1,10 +1,6 @@
 {
 	"name": "sql_db_ds_without_foreach",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "sqldb_customer_ls",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"tableName": {
 				"type": "string"
