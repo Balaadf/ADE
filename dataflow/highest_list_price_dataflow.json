@@ -21,7 +21,7 @@
 					"name": "sort1"
 				},
 				{
-					"name": "filter2"
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -47,10 +47,10 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"filter2 aggregate(groupBy(ProductCategoryID),",
+				"filter1 aggregate(groupBy(ProductCategoryID),",
 				"     ListPrice = max(ProductID)) ~> aggregate1",
 				"aggregate1 sort(desc(ListPrice, true)) ~> sort1",
-				"source1 filter(Color!='blue') ~> filter2"
+				"source1 filter(ERROR_FUNCTION('')) ~> filter1"
 			]
 		}
 	}
