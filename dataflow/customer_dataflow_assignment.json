@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "adls_customer_dataflow_ds",
+						"referenceName": "adls_dataflow_customer_ds",
 						"type": "DatasetReference"
 					},
 					"name": "adls"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "sql_customer_dataflow_ds",
+						"referenceName": "sql_dataflow_customer_ds",
 						"type": "DatasetReference"
 					},
 					"name": "sqldb"
@@ -28,8 +28,8 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          CustomerID as short,",
-				"          NameStyle as boolean,",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
 				"          Title as string,",
 				"          FirstName as string,",
 				"          MiddleName as string,",
