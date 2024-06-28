@@ -16,6 +16,9 @@
 			"transformations": [
 				{
 					"name": "aggregate1"
+				},
+				{
+					"name": "sort1"
 				}
 			],
 			"scriptLines": [
@@ -42,7 +45,8 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 aggregate(groupBy(ProductCategoryID),",
-				"     ListPrice = ERROR_FUNCTION('')) ~> aggregate1"
+				"     ListPrice = max(ProductID)) ~> aggregate1",
+				"aggregate1 sort(asc(ListPrice, true)) ~> sort1"
 			]
 		}
 	}
