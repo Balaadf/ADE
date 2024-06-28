@@ -5,14 +5,25 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "source1"
+					"dataset": {
+						"referenceName": "sql_customer_dataflow_ds",
+						"type": "DatasetReference"
+					},
+					"name": "sqldbcustomer"
+				},
+				{
+					"name": "source2"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1"
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> sqldbcustomer",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source2"
 			]
 		}
 	}
