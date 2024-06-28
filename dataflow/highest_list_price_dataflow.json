@@ -19,6 +19,9 @@
 				},
 				{
 					"name": "sort1"
+				},
+				{
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -46,7 +49,8 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 aggregate(groupBy(ProductCategoryID),",
 				"     ListPrice = max(ProductID)) ~> aggregate1",
-				"aggregate1 sort(asc(ListPrice, true)) ~> sort1"
+				"aggregate1 sort(desc(ListPrice, true)) ~> sort1",
+				"sort1 filter(ERROR_FUNCTION('')) ~> filter1"
 			]
 		}
 	}
