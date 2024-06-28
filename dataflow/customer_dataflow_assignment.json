@@ -1,0 +1,19 @@
+{
+	"name": "customer_dataflow_assignment",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "adls"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> adls"
+			]
+		}
+	}
+}
