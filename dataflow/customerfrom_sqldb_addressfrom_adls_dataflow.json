@@ -65,7 +65,7 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 filter(sqldbcustomer@CustomerID>100 && adlscustomeraddress@CustomerID<200) ~> filter1"
+				"join1 filter(sqldbcustomer@CustomerID>10 && adlscustomeraddress@CustomerID<20) ~> filter1"
 			]
 		}
 	}
