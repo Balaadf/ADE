@@ -22,7 +22,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "adls_customeraddress_dataflow_json_ds",
+						"referenceName": "json_dataflow_adls_ds",
 						"type": "DatasetReference"
 					},
 					"name": "sink1",
