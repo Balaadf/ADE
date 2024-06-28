@@ -24,6 +24,9 @@
 			"transformations": [
 				{
 					"name": "even"
+				},
+				{
+					"name": "AlterRow1"
 				}
 			],
 			"scriptLines": [
@@ -48,12 +51,14 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> adls",
 				"adls filter(CustomerID%2==0) ~> even",
-				"even sink(allowSchemaDrift: true,",
+				"even alterRow(upsertIf(1==1)) ~> AlterRow1",
+				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
-				"     insertable:true,",
+				"     insertable:false,",
 				"     updateable:false,",
 				"     upsertable:true,",
+				"     keys:['CustomerID'],",
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
