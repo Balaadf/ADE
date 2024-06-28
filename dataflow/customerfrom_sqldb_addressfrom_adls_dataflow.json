@@ -12,7 +12,11 @@
 					"name": "sqldbcustomer"
 				},
 				{
-					"name": "source2"
+					"dataset": {
+						"referenceName": "adls_customeraddress_dataflow_ds",
+						"type": "DatasetReference"
+					},
+					"name": "adlscustomeraddress"
 				}
 			],
 			"sinks": [],
@@ -22,8 +26,16 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> sqldbcustomer",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source2"
+				"source(output(",
+				"          CustomerID as string,",
+				"          AddressID as string,",
+				"          AddressType as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> adlscustomeraddress"
 			]
 		}
 	}
