@@ -2,15 +2,11 @@
 	"name": "sql_customer_dataflow_ds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "sql_dataflow_sink_ls",
+			"referenceName": "sql_dataflow_customer_ls",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "SalesLT",
-			"table": "Customer"
-		}
+		"schema": []
 	}
 }
