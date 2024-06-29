@@ -81,7 +81,7 @@
 									"upsertSettings": {
 										"useTempDB": true,
 										"keys": [
-											""
+											"cid"
 										]
 									},
 									"sqlWriterUseTableLock": false,
