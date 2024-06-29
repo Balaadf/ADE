@@ -1,0 +1,14 @@
+{
+	"name": "copy_the_customer data_from_csv_file_to_SQL_table",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				""
+			]
+		}
+	}
+}
