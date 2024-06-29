@@ -44,7 +44,13 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(activity('Lookup1').output.value.CustomerID%2,1)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
