@@ -14,6 +14,10 @@
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "adls_csv_generic",
+						"type": "DatasetReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -53,6 +57,9 @@
 				"source1 filter(Color!='Blue') ~> filter1",
 				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
