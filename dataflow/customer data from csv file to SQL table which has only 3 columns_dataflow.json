@@ -79,7 +79,9 @@
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
-				"          cid = CustomerID",
+				"          cid = CustomerID,",
+				"          name = FirstName,",
+				"          mailid = EmailAddress",
 				"     )) ~> sink1"
 			]
 		}
