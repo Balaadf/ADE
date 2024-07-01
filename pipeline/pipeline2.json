@@ -1,0 +1,9 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"folder": {
+			"name": "task8_adfdataflow_5qs"
+		},
+		"annotations": []
+	}
+}
