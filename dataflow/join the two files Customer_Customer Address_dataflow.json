@@ -12,6 +12,10 @@
 					"name": "source1"
 				},
 				{
+					"dataset": {
+						"referenceName": "adls_customeraddress_dataflow_ds",
+						"type": "DatasetReference"
+					},
 					"name": "source2"
 				}
 			],
@@ -19,8 +23,8 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          CustomerID as string,",
-				"          NameStyle as string,",
+				"          CustomerID as short,",
+				"          NameStyle as boolean,",
 				"          Title as string,",
 				"          FirstName as string,",
 				"          MiddleName as string,",
@@ -38,8 +42,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source2"
+				"source(output(",
+				"          CustomerID as short,",
+				"          AddressID as short,",
+				"          AddressType as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source2"
 			]
 		}
 	}
