@@ -23,7 +23,7 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          id as string,",
+				"          id as short,",
 				"          name as string,",
 				"          city as string",
 				"     ),",
