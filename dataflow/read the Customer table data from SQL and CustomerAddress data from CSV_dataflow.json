@@ -26,6 +26,9 @@
 				},
 				{
 					"name": "filter1"
+				},
+				{
+					"name": "sort1"
 				}
 			],
 			"scriptLines": [
@@ -65,7 +68,8 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 filter(source1@CustomerID>1000 && source1@CustomerID<2000) ~> filter1"
+				"join1 filter(source1@CustomerID>1000 && source1@CustomerID<2000) ~> filter1",
+				"filter1 sort(asc(source1@CustomerID, true)) ~> sort1"
 			]
 		}
 	}
