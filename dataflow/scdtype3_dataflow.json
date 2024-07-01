@@ -46,6 +46,9 @@
 				},
 				{
 					"name": "alterRow1"
+				},
+				{
+					"name": "select3"
 				}
 			],
 			"scriptLines": [
@@ -91,6 +94,15 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select2",
 				"select2 alterRow(updateIf(1==1)) ~> alterRow1",
+				"split1@notmatched select(mapColumn(",
+				"          id,",
+				"          name,",
+				"          city,",
+				"          db_id,",
+				"          db_name",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select3",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
