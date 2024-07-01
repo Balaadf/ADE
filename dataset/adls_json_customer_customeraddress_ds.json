@@ -1,0 +1,70 @@
+{
+	"name": "adls_json_customer_customeraddress_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "landing"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"CustomerID": {
+					"type": "string"
+				},
+				"NameStyle": {
+					"type": "string"
+				},
+				"Title": {
+					"type": "string"
+				},
+				"FirstName": {
+					"type": "string"
+				},
+				"MiddleName": {
+					"type": "string"
+				},
+				"LastName": {
+					"type": "string"
+				},
+				"CompanyName": {
+					"type": "string"
+				},
+				"SalesPerson": {
+					"type": "string"
+				},
+				"EmailAddress": {
+					"type": "string"
+				},
+				"Phone": {
+					"type": "string"
+				},
+				"PasswordHash": {
+					"type": "string"
+				},
+				"PasswordSalt": {
+					"type": "string"
+				},
+				"rowguid": {
+					"type": "string"
+				},
+				"ModifiedDate": {
+					"type": "string"
+				},
+				"AddressID": {
+					"type": "string"
+				},
+				"AddressType": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
