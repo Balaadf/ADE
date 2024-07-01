@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "sqldb_sink_customer_dataflow_ds",
+						"referenceName": "sqldb_customer_new_dataflow_ds",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -54,6 +54,11 @@
 				"oddnumber alterRow(upsertIf(1==1)) ~> alterRow1",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          cid as integer,",
+				"          name as string,",
+				"          mailid as string",
+				"     ),",
 				"     deletable:false,",
 				"     insertable:false,",
 				"     updateable:false,",
