@@ -26,6 +26,9 @@
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
+				},
+				{
+					"name": "sink2"
 				}
 			],
 			"transformations": [
@@ -97,9 +100,7 @@
 				"split1@notmatched select(mapColumn(",
 				"          id,",
 				"          name,",
-				"          city,",
-				"          db_id,",
-				"          db_name",
+				"          city",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select3",
@@ -118,7 +119,11 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1",
+				"select3 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink2"
 			]
 		}
 	}
