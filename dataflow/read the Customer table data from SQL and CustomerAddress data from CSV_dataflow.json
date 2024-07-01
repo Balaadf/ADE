@@ -1,0 +1,19 @@
+{
+	"name": "read the Customer table data from SQL and CustomerAddress data from CSV_dataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source1"
+			]
+		}
+	}
+}
