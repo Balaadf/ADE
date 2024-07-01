@@ -67,7 +67,7 @@
 				"leftjoin1 split(!isNull(db_id),",
 				"     isNull(db_id),",
 				"     disjoint: false) ~> split1@(matched, notmatched)",
-				"split1@matched derive(old_name = ERROR_FUNCTION('')) ~> derivedColumn1"
+				"split1@matched derive(old_name = db_name) ~> derivedColumn1"
 			]
 		}
 	}
