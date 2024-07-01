@@ -1,0 +1,16 @@
+{
+	"name": "sqldb_sink_customer_dataflow_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "saleslt",
+			"table": "customernewtable"
+		}
+	}
+}
