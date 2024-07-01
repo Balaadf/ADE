@@ -2,7 +2,7 @@
 	"name": "adls_csv_generic",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "adls_dataflow_customer_ls",
+			"referenceName": "adls_ls_new",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "ProductResultcsv",
 				"fileSystem": "landing"
 			},
 			"columnDelimiter": ",",
