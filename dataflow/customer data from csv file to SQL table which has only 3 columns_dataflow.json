@@ -12,8 +12,16 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "oddnumber"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          CustomerID as short,",
@@ -34,7 +42,12 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 filter(CustomerID%2!=0) ~> oddnumber",
+				"oddnumber sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
