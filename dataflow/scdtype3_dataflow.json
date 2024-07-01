@@ -12,6 +12,10 @@
 					"name": "adlstextfilesource1"
 				},
 				{
+					"dataset": {
+						"referenceName": "sqldb_source_scdtype3_ds",
+						"type": "DatasetReference"
+					},
 					"name": "sqldbsource2"
 				}
 			],
@@ -26,8 +30,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> adlstextfilesource1",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> sqldbsource2"
+				"source(output(",
+				"          id as integer,",
+				"          name as string,",
+				"          city as string,",
+				"          old_name as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> sqldbsource2"
 			]
 		}
 	}

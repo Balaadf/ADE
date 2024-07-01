@@ -1,0 +1,34 @@
+{
+	"name": "sqldb_source_scdtype3_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_dbo_customer_dataflow_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "city",
+				"type": "varchar"
+			},
+			{
+				"name": "old_name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee_scdtype3"
+		}
+	}
+}
