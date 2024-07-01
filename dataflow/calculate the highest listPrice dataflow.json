@@ -41,7 +41,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 aggregate(groupBy(ProductCategoryID)) ~> aggregate1"
+				"source1 aggregate(groupBy(ProductCategoryID),",
+				"     ListPrice = max(ListPrice)) ~> aggregate1"
 			]
 		}
 	}
