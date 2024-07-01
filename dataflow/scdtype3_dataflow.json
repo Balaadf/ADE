@@ -62,8 +62,8 @@
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> leftjoin1",
 				"leftjoin1 split(!isNull(db_id),",
-				"     ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(matched, not)"
+				"     isNull(db_id),",
+				"     disjoint: false) ~> split1@(matched, notmatched)"
 			]
 		}
 	}
