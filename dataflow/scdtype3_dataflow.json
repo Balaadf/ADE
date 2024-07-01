@@ -29,6 +29,9 @@
 				},
 				{
 					"name": "split1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -63,7 +66,8 @@
 				"     broadcast: 'auto')~> leftjoin1",
 				"leftjoin1 split(!isNull(db_id),",
 				"     isNull(db_id),",
-				"     disjoint: false) ~> split1@(matched, notmatched)"
+				"     disjoint: false) ~> split1@(matched, notmatched)",
+				"split1@matched derive() ~> derivedColumn1"
 			]
 		}
 	}
