@@ -17,12 +17,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "calculate the highest listPrice dataflow",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"sink1": {
-								"folder": "ProductResultcsv"
-							}
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
