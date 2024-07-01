@@ -35,6 +35,9 @@
 				},
 				{
 					"name": "select2"
+				},
+				{
+					"name": "alterRow1"
 				}
 			],
 			"scriptLines": [
@@ -75,12 +78,11 @@
 				"          id,",
 				"          name,",
 				"          city,",
-				"          db_id,",
-				"          db_name,",
 				"          old_name",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select2"
+				"     skipDuplicateMapOutputs: true) ~> select2",
+				"select2 alterRow() ~> alterRow1"
 			]
 		}
 	}
