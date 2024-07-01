@@ -32,6 +32,9 @@
 				},
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "select2"
 				}
 			],
 			"scriptLines": [
@@ -67,7 +70,17 @@
 				"leftjoin1 split(!isNull(db_id),",
 				"     isNull(db_id),",
 				"     disjoint: false) ~> split1@(matched, notmatched)",
-				"split1@matched derive(old_name = db_name) ~> derivedColumn1"
+				"split1@matched derive(old_name = db_name) ~> derivedColumn1",
+				"derivedColumn1 select(mapColumn(",
+				"          id,",
+				"          name,",
+				"          city,",
+				"          db_id,",
+				"          db_name,",
+				"          old_name",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select2"
 			]
 		}
 	}
