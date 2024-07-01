@@ -9,7 +9,10 @@
 						"referenceName": "adls_scdtype3_ds",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "adlstextfilesource1"
+				},
+				{
+					"name": "sqldbsource2"
 				}
 			],
 			"sinks": [],
@@ -22,7 +25,9 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> adlstextfilesource1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> sqldbsource2"
 			]
 		}
 	}
