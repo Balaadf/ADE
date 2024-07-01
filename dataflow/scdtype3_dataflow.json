@@ -62,7 +62,7 @@
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> leftjoin1",
 				"leftjoin1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"     disjoint: false) ~> split1@(matched, )"
 			]
 		}
 	}
