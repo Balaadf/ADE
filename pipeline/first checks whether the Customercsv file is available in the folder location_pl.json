@@ -1,0 +1,9 @@
+{
+	"name": "first checks whether the Customercsv file is available in the folder location_pl",
+	"properties": {
+		"folder": {
+			"name": "task7_adfpipeline-3"
+		},
+		"annotations": []
+	}
+}
