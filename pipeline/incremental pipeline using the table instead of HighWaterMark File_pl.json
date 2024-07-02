@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from [SalesLT].[customernewtable]\n",
+						"sqlReaderQuery": "select ModifiedDate from [SalesLT].[customernewtable]\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
