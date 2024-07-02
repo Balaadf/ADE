@@ -1,0 +1,9 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"folder": {
+			"name": "task7_adfpipeline-3"
+		},
+		"annotations": []
+	}
+}
