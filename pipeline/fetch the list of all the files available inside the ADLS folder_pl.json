@@ -1,0 +1,9 @@
+{
+	"name": "fetch the list of all the files available inside the ADLS folder_pl",
+	"properties": {
+		"folder": {
+			"name": "task7_adfpipeline-3"
+		},
+		"annotations": []
+	}
+}
