@@ -36,7 +36,13 @@
 							"inputs": [
 								{
 									"referenceName": "sqldb_generic_latest_source_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"table": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
