@@ -12,10 +12,17 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "aggregate1"
+				},
+				{
+					"name": "select1"
 				}
 			],
 			"scriptLines": [
@@ -30,7 +37,18 @@
 				"source1 aggregate(groupBy(id,",
 				"          name,",
 				"          city),",
-				"     max_id = max(id)) ~> aggregate1"
+				"     maxid = max(id)) ~> aggregate1",
+				"aggregate1 select(mapColumn(",
+				"          id,",
+				"          name,",
+				"          city",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
