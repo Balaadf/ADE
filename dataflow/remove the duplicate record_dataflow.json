@@ -27,7 +27,10 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 aggregate() ~> aggregate1"
+				"source1 aggregate(groupBy(id,",
+				"          name,",
+				"          city),",
+				"     max_id = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
