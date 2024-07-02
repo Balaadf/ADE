@@ -38,6 +38,10 @@
 									"referenceName": "sqldb_generic_latest_source_ds",
 									"type": "DatasetReference",
 									"parameters": {
+										"schema": {
+											"value": "saleslt",
+											"type": "Expression"
+										},
 										"table": {
 											"value": "@item()",
 											"type": "Expression"
