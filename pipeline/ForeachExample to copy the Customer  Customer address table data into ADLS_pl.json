@@ -71,7 +71,13 @@
 							"outputs": [
 								{
 									"referenceName": "adls_sink_generic_latest_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"folder": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
