@@ -15,6 +15,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select * from sys.tables\n",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "sql_dataflow_customer_ds",
+						"type": "DatasetReference"
+					},
 					"firstRowOnly": false
 				}
 			}
