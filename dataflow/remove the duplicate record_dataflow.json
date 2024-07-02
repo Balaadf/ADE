@@ -20,7 +20,7 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          id as string,",
+				"          id as short,",
 				"          name as string,",
 				"          city as string",
 				"     ),",
@@ -30,7 +30,7 @@
 				"source1 aggregate(groupBy(id,",
 				"          name,",
 				"          city),",
-				"     max_id = ERROR_FUNCTION('')) ~> aggregate1"
+				"     max_id = max(id)) ~> aggregate1"
 			]
 		}
 	}
