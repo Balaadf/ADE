@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from [SalesLT].[customernewtable]\n",
+						"sqlReaderQuery": "select modifieddate from [SalesLT].[customernewtable]\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -25,7 +25,7 @@
 						"referenceName": "sql_dataflow_customer_ds",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": false
+					"firstRowOnly": true
 				}
 			},
 			{
