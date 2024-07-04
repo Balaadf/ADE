@@ -1,6 +1,14 @@
 {
 	"name": "incremental pipeline using the table instead of HighWaterMark File_pl",
 	"properties": {
+		"activities": [
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [],
+				"userProperties": []
+			}
+		],
 		"folder": {
 			"name": "task7_adfpipeline-3"
 		},
