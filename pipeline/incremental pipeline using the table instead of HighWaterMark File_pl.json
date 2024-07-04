@@ -84,7 +84,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from dbo.employee where modifieddate>'@{activity('Lookup1').output.firstRow.modifieddate}' and <='@{activity('Lookup2').output.firstRow.ModifiedDate}'",
+							"value": "select * from dbo.employee where modifieddate>int('@{activity('Lookup1').output.firstRow.modifieddate}' and <='@{activity('Lookup2').output.firstRow.ModifiedDate}')",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
