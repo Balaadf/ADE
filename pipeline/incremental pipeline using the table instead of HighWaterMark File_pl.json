@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select modifieddate from [SalesLT].[customernewtable]\n",
+						"sqlReaderQuery": "select modifieddate as from [SalesLT].[customernewtable]\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -50,7 +50,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select modifieddate from [SalesLT].[CustomerAddress]",
+						"sqlReaderQuery": "select modifieddate  as lastupdate from [SalesLT].[CustomerAddress]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
