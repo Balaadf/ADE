@@ -31,7 +31,14 @@
 			{
 				"name": "Lookup2",
 				"type": "Lookup",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -43,7 +50,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select modifieddate as lastdate from saleslt.customer_new",
+						"sqlReaderQuery": "select modifieddate as lastdate from saleslt.customeraddress",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
