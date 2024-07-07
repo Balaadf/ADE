@@ -11,7 +11,21 @@
 					"items": {
 						"value": "@createArray('product','customer')",
 						"type": "Expression"
-					}
+					},
+					"activities": [
+						{
+							"name": "Filter1",
+							"type": "Filter",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"items": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					]
 				}
 			}
 		],
