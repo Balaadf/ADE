@@ -1,0 +1,9 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"folder": {
+			"name": "task10_rest_api_triggers"
+		},
+		"annotations": []
+	}
+}
