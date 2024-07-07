@@ -15,7 +15,11 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"method": "GET"
+					"method": "GET",
+					"url": {
+						"value": "https://restcountries.com/v3.1/all",
+						"type": "Expression"
+					}
 				}
 			}
 		],
