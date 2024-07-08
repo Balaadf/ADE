@@ -81,7 +81,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from watermarktable where updateddate > '@{activity('watermarktable').output.firstRow.WatermarkValue}' and updateddate <='@{activity('datasourcetable').output.firstRow.updateddate}'",
+							"value": "select * from watermarktable where LastModifytime > '@{activity('watermarktable').output.firstRow.WatermarkValue}' and LastModifytime <='@{activity('datasourcetable').output.firstRow.updateddate}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
