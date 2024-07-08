@@ -144,7 +144,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "update watermarktable set WatermarkValue= @{activity('datasourcetable').output.firstRow.updateddate}",
+							"value": "update watermarktable set WatermarkValue= '@{activity('datasourcetable').output.firstRow.updateddate}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
