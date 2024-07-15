@@ -145,7 +145,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "update dbo.HW_TABLE set hw_date='@{activity('customer_table').output.firstRow.latest_date}' where tablename='customer'",
+						"sqlReaderQuery": "",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -155,7 +155,7 @@
 						"upsertSettings": {
 							"useTempDB": true,
 							"keys": [
-								""
+								"tablename"
 							]
 						},
 						"sqlWriterUseTableLock": false,
@@ -173,7 +173,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "HW_TABLE_sqldb_ds",
+						"referenceName": "sqldb_customer_table_ds",
 						"type": "DatasetReference"
 					}
 				],
