@@ -233,7 +233,14 @@
 			{
 				"name": "Set variable2",
 				"type": "SetVariable",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "customer_table",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"secureOutput": false,
 					"secureInput": false
@@ -241,7 +248,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "customer_table_variable",
-					"value": ""
+					"value": {
+						"value": "@activity('customer_table').output.firstRow.updated_date",
+						"type": "Expression"
+					}
 				}
 			}
 		],
