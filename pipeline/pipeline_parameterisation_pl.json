@@ -84,7 +84,7 @@
 		],
 		"parameters": {
 			"tablename": {
-				"type": "string"
+				"type": "array"
 			}
 		},
 		"annotations": []
