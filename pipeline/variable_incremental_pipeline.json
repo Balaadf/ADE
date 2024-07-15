@@ -58,7 +58,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "customer_table",
+						"activity": "Set variable1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
