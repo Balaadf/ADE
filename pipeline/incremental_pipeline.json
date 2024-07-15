@@ -152,7 +152,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sqldb_customer_table_ds",
+						"referenceName": "HW_TABLE_sqldb_ds",
 						"type": "DatasetReference"
 					}
 				]
