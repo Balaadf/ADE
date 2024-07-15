@@ -167,6 +167,32 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "tablename",
+									"type": "varchar"
+								},
+								"sink": {
+									"name": "tablename",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "hw_date",
+									"type": "datetime",
+									"scale": 3,
+									"precision": 23
+								},
+								"sink": {
+									"name": "hw_date",
+									"type": "datetime",
+									"scale": 3,
+									"precision": 23
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -176,7 +202,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sqldb_customer_table_ds",
+						"referenceName": "HW_TABLE_sqldb_ds",
 						"type": "DatasetReference"
 					}
 				],
