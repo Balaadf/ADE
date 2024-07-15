@@ -212,10 +212,37 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "HW_TABLE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "hw_table_variable",
+					"value": {
+						"value": "@activity('HW_TABLE').output.firstRow.latest_date",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
 			"hw_table_variable": {
+				"type": "String"
+			},
+			"customer_table_variable": {
 				"type": "String"
 			}
 		},
