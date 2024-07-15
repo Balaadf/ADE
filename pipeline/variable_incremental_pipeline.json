@@ -31,14 +31,7 @@
 			{
 				"name": "customer_table",
 				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "HW_TABLE",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
