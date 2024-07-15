@@ -118,7 +118,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "adls_customer_dataflow_ds",
+						"referenceName": "adls_dataflow_customer_ds",
 						"type": "DatasetReference"
 					}
 				]
