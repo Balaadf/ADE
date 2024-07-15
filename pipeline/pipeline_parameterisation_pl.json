@@ -84,7 +84,8 @@
 		],
 		"parameters": {
 			"tablename": {
-				"type": "array"
+				"type": "array",
+				"defaultValue": "['customer','customeraddress']"
 			}
 		},
 		"annotations": []
