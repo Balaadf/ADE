@@ -1,0 +1,27 @@
+{
+	"name": "adls_json_5countries_generric_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"country": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().country",
+					"type": "Expression"
+				},
+				"fileSystem": "landing"
+			}
+		},
+		"schema": {}
+	}
+}
