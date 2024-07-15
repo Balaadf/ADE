@@ -124,8 +124,8 @@
 				]
 			},
 			{
-				"name": "Lookup1",
-				"type": "Lookup",
+				"name": "Copy data2",
+				"type": "Copy",
 				"dependsOn": [
 					{
 						"activity": "Copy data1",
@@ -149,12 +149,14 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"dataset": {
+					"enableStaging": false
+				},
+				"inputs": [
+					{
 						"referenceName": "HW_TABLE_sqldb_ds",
 						"type": "DatasetReference"
-					},
-					"firstRowOnly": false
-				}
+					}
+				]
 			}
 		],
 		"folder": {
