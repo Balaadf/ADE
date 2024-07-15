@@ -52,7 +52,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"country": {
-											"value": "@item()",
+											"value": "@itm()",
 											"type": "Expression"
 										}
 									}
