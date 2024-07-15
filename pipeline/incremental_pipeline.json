@@ -118,7 +118,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "adls_dataflow_customer_ds",
+						"referenceName": "adls_incremental_sink_ds",
 						"type": "DatasetReference"
 					}
 				]
