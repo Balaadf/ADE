@@ -69,6 +69,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "Set variable2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -83,7 +89,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from saleslt.customer where modifieddate > '@{activity('HW_TABLE').output.firstRow.updated_date}' and modifieddate<='@{activity('customer_table').output.firstRow.latest_date}'",
+							"value": "select * from saleslt.customer where modifieddate > '@{variables('hw_table_variable')}' and modifieddate<='@{variables('customer_table_variable')}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -146,7 +152,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select 'customer' as tablename,'@{activity('customer_table').output.firstRow.latest_date}' as hw_date",
+							"value": "select 'customer' as tablename,'@{variables('customer_table_variable')}' as hw_date",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
