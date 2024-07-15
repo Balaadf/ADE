@@ -82,6 +82,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "select * from saleslt.customer where modifieddate > '@{activity('HW_TABLE').output.firstRow.updated_date}' and modifieddate<='@{activity('customer_table').output.firstRow.latest_date}'",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
