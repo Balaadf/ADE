@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Copy data1').output",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -22,8 +26,19 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "product_sqldb_ds",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
@@ -31,7 +46,7 @@
 		],
 		"parameters": {
 			"tablename": {
-				"type": "string"
+				"type": "array"
 			}
 		},
 		"annotations": []
