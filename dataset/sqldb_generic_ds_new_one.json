@@ -1,0 +1,21 @@
+{
+	"name": "sqldb_generic_ds_new_one",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema": {
+				"type": "string",
+				"defaultValue": "saleslt"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

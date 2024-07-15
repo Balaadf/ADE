@@ -35,7 +35,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "product_sqldb_ds",
+									"referenceName": "sqldb_generic_ds_new_one",
 									"type": "DatasetReference"
 								}
 							]
