@@ -63,7 +63,14 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "customer_table",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -225,7 +232,7 @@
 				"typeProperties": {
 					"variableName": "hw_table_variable",
 					"value": {
-						"value": "@activity('HW_TABLE').output.firstRow.latest_date",
+						"value": "@activity('HW_TABLE').output.firstRow.updated_date",
 						"type": "Expression"
 					}
 				}
@@ -239,6 +246,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -249,7 +262,7 @@
 				"typeProperties": {
 					"variableName": "customer_table_variable",
 					"value": {
-						"value": "@activity('customer_table').output.firstRow.updated_date",
+						"value": "@activity('customer_table').output.firstRow.latest_date",
 						"type": "Expression"
 					}
 				}
