@@ -1,6 +1,14 @@
 {
 	"name": "pipeline to fetch the 5 countries_pl",
 	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
+			}
+		],
 		"folder": {
 			"name": "task10_rest_api_triggers"
 		},
