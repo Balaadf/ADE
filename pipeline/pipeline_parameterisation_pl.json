@@ -36,7 +36,14 @@
 							"inputs": [
 								{
 									"referenceName": "sqldb_generic_ds_new_one",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"schema": "saleslt",
+										"tablename": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
