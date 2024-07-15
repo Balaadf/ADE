@@ -90,7 +90,10 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"method": "GET"
+							}
 						}
 					]
 				}
