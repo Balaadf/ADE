@@ -65,7 +65,13 @@
 							"outputs": [
 								{
 									"referenceName": "adls_generic_foreach_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"foldername": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
