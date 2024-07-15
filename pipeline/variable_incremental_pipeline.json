@@ -214,6 +214,11 @@
 				]
 			}
 		],
+		"variables": {
+			"hw_table_variable": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "task7_adfpipeline-3"
 		},
