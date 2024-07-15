@@ -43,7 +43,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select max(ModifiedDate) a",
+						"sqlReaderQuery": "select max(ModifiedDate) as latest_date from saleslt.customer",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
