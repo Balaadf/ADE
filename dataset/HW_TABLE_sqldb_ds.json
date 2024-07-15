@@ -1,0 +1,27 @@
+{
+	"name": "HW_TABLE_sqldb_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_dataflow_customer_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "tablename",
+				"type": "varchar"
+			},
+			{
+				"name": "hw_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HW_TABLE"
+		}
+	}
+}
