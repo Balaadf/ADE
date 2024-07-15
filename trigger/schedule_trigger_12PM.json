@@ -6,7 +6,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pipeline to fetch the 5 countries_pl",
+					"referenceName": "pipeline_to_fetch_the_5_countries_pl",
 					"type": "PipelineReference"
 				}
 			}

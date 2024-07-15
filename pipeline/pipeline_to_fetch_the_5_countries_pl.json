@@ -1,5 +1,5 @@
 {
-	"name": "pipeline to fetch the 5 countries_pl",
+	"name": "pipeline_to_fetch_the_5_countries_pl",
 	"properties": {
 		"activities": [
 			{
