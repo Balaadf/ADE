@@ -146,7 +146,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select '@{activity('customer_table').output.firstRow.latest_date}'",
+							"value": "select '@{activity('customer_table').output.firstRow.latest_date}' from customer",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
