@@ -39,7 +39,19 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select max(ModifiedDate) a",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "sqldb_customer_table_ds",
+						"type": "DatasetReference"
+					}
+				}
 			}
 		],
 		"folder": {
