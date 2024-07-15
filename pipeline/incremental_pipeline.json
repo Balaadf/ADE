@@ -145,7 +145,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "update dbo.HW_TABLE set hw_date='@{activity('customer_table').output.firstRow.latest_date}'",
+						"sqlReaderQuery": "update dbo.HW_TABLE set hw_date='@{activity('customer_table').output.firstRow.latest_date}' where tablename='customer'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
