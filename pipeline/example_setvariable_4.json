@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "example_setvariable_4",
 	"properties": {
 		"activities": [
 			{
@@ -10,9 +10,18 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "a",
+					"value": ""
+				}
 			}
 		],
+		"variables": {
+			"a": {
+				"type": "Integer"
+			}
+		},
 		"folder": {
 			"name": "INTERVIEW_PURPOSE_PIPELINES"
 		},
