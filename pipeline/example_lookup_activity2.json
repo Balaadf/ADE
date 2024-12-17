@@ -1,0 +1,11 @@
+{
+	"name": "example_lookup_activity2",
+	"properties": {
+		"folder": {
+			"name": "INTERVIEW_PURPOSE_PIPELINES"
+		},
+		"annotations": [
+			"lookup to see the count"
+		]
+	}
+}
