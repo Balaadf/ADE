@@ -16,10 +16,21 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "sqldb_new_ds",
+						"referenceName": "adls_new_ds",
 						"type": "DatasetReference"
 					},
-					"fieldList": []
+					"fieldList": [
+						"lastModified",
+						"childItems",
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
 				}
 			}
 		],
