@@ -22,6 +22,8 @@
 					"fieldList": [
 						"lastModified",
 						"childItems",
+						"itemName",
+						"itemType",
 						"exists"
 					],
 					"storeSettings": {
