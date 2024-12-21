@@ -12,11 +12,8 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "a",
-					"value": {
-						"value": "@add(2,10)",
-						"type": "Expression"
-					}
+					"variableName": "pipelineReturnValue",
+					"setSystemVariable": true
 				}
 			}
 		],
